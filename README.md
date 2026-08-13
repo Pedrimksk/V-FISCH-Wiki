@@ -1,4 +1,4 @@
-[README (2).md](https://github.com/user-attachments/files/31008411/README.2.md)# 🎣 Virtual Fisher — Wiki do Jogador
+[README (2).md](https://github.com/user-attachments/files/31008411/README.2.md)# 🎣 V-FISCH — Wiki do Jogador
 
 Bem-vindo à cabana do pescador! Este bot transforma seu servidor num
 jogo completo de pesca: pescarias, biomas, loja, pets, baús, eventos
