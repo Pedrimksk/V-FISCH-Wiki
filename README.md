@@ -1,358 +1,106 @@
-[README.md](https://github.com/user-attachments/files/30965589/README.md)
-# 🎣 Virtual Fisher — Wiki Completa do Jogo
+[README (2).md](https://github.com/user-attachments/files/31008411/README.2.md)# 🎣 Virtual Fisher — Wiki do Jogador
 
-Bem-vindo à cabana do pescador! Este documento é a wiki completa do bot de pesca: todos os comandos, mecânicas, itens, raridades e sistemas do jogo, explicados do início ao fim.
+Bem-vindo à cabana do pescador! Este bot transforma seu servidor num
+jogo completo de pesca: pescarias, biomas, loja, pets, baús, eventos
+globais e um sistema de progressão bem recheado. Tudo funciona por
+menus e botões — não precisa decorar nada.
 
----
+## Índice
 
-## 📑 Índice
+- [Como começar](#como-começar)
+- [Como pescar](#como-pescar)
+- [Raridades dos peixes](#raridades-dos-peixes)
+- [Biomas](#biomas)
+- [Ligas](#ligas)
+- [Progressão](#progressão)
+- [Equipamento](#equipamento)
+- [Prestígio](#prestígio)
+- [Boosts](#boosts)
+- [Gemas e Elixires](#gemas-e-elixires)
+- [Presente Diário](#presente-diário)
+- [Pets](#pets)
+- [Baús e Relíquias](#baús-e-relíquias)
+- [Evento Global: Criaturas Extintas](#evento-global-criaturas-extintas)
+- [Títulos](#títulos)
+- [Fischpédia e Ranking](#fischpédia-e-ranking)
+- [Perfil](#perfil)
+- [Comandos disponíveis](#comandos-disponíveis)
+- [Multiservidor](#multiservidor)
 
-1. [Como começar](#-como-começar)
-2. [Comandos](#-comandos)
-3. [Pescando: como funciona](#-pescando-como-funciona)
-4. [Biomas](#-biomas)
-5. [Raridades de peixes](#-raridades-de-peixes)
-6. [Peixes Shiny ✨ e Sparkling 🌈](#-peixes-shiny--e-sparkling-)
-7. [Evento Global: Criaturas Extintas 🦴](#-evento-global-criaturas-extintas-)
-8. [Varas de pescar](#-varas-de-pescar)
-9. [Iscas](#-iscas)
-10. [Barcos](#-barcos)
-11. [Pets](#-pets)
-12. [Relíquias Encantadas e Encantamento de Vara](#-relíquias-encantadas-e-encantamento-de-vara)
-13. [Baús de Loot](#-baús-de-loot)
-14. [Upgrades Permanentes](#-upgrades-permanentes)
-15. [Boosts (consumíveis)](#-boosts-consumíveis)
-16. [Gemas 💎 e Elixires](#-gemas--e-elixires)
-17. [Presente Diário e Sequência (Streak)](#-presente-diário-e-sequência-streak)
-18. [Ligas e Títulos](#-ligas-e-títulos)
-19. [Nível, XP e Prestígio](#-nível-xp-e-prestígio)
-20. [Fischpédia](#-fischpédia)
-21. [Configuração para administradores](#-configuração-para-administradores)
-22. [Glossário rápido](#-glossário-rápido)
+## Como começar
 
----
+- Use `/pescar` para abrir sua cabana de pescador — a resposta é
+  **privada** (só você vê), então pode usar à vontade sem poluir o
+  canal.
+- No menu você navega por botões entre **Pescar, Inventário, Loja,
+  Perfil, Ranking e Viajar** (trocar de bioma).
+- Use `/perfil` a qualquer momento para ver seu progresso
+  publicamente no canal — ou marque outro membro (`/perfil @alguém`)
+  para ver o dele.
 
-## 🚀 Como começar
+## Como pescar
 
-1. Digite `/pescar` para abrir a **Cabana do Pescador** — o menu principal do jogo. A resposta é **privada** (só você vê), então sinta-se livre para navegar à vontade.
-2. Dentro da cabana, use os botões para pescar, ver seu inventário, acessar a loja, trocar de bioma, ver seu perfil e muito mais.
-3. Todo peixe que você pesca vai para o seu **inventário**. Venda-os para ganhar moedas 🪙 e comprar equipamentos melhores.
-4. Suba de nível pescando para desbloquear **biomas** mais avançados, com peixes mais raros e valiosos.
+- Cada pescaria puxa 1 ou mais peixes de uma vez — a quantidade
+  depende da sua **vara** e do seu **barco**.
+- Peixes raros em biomas avançados podem **escapar da linha** se sua
+  vara não for forte o bastante para aquele nível de dificuldade.
+  Uma vara melhor, uma isca melhor ou boosts ativos reduzem essa
+  chance de fuga.
+- Volta e meia um peixe sai como uma variante especial:
+  - ✨ **Shiny** — vale **2x** em moedas e XP.
+  - 🌈 **Sparkling** — muito mais rara, vale **4x** em moedas e XP.
+- Pescar em dias seguidos aumenta um bônus permanente de XP
+  (sequência diária) — pular um dia inteiro reinicia a sequência.
 
----
+## Raridades dos peixes
 
-## 🕹️ Comandos
+Da mais fraca para a mais forte:
 
-| Comando | Quem pode usar | O que faz |
-|---|---|---|
-| `/pescar` | Todos | Abre a Cabana do Pescador (menu principal, resposta privada). |
-| `/perfil [jogador]` | Todos | Mostra seu perfil (ou o de outro jogador) publicamente no canal — nível, liga, vara, pets, prestígio, etc. |
-| `/fischpedia` | Todos | Abre sua Fischpédia — coleção estilo Pokédex de todos os peixes já capturados. |
-| `/definir-titulo` | Administradores | Concede um título especial e customizado a um jogador. |
-| `/remover-titulo` | Administradores | Remove o título especial customizado de um jogador. |
-| `/definir-icone-titulo` | Administradores | Troca só o ícone (emoji) do título especial que o jogador já tem. |
-| `/definir-canal-eventos` | Administradores | Define o canal onde o bot anuncia capturas raras e Eventos Globais. |
-
----
-
-## 🎣 Pescando: como funciona
-
-Cada vez que você clica em **"Pescar"** na Cabana:
-
-1. O bot calcula **quantos peixes** você fisga nesta rodada, com base na sua vara equipada (`minCatch`–`maxCatch`) e no seu barco (peixes extras fixos).
-2. Para cada peixe, o jogo **sorteia** qual peixe será, entre os disponíveis no seu bioma atual — peixes mais raros têm peso (chance) muito menor.
-3. Peixes difíceis para a sua vara atual podem **fugir da linha** (veja [Chance de fuga](#chance-de-fuga)).
-4. Cada peixe capturado tem uma pequena chance de sair como **Shiny ✨** ou **Sparkling 🌈** (veja a seção dedicada).
-5. Você ganha **XP** pelos peixes pescados, pode subir de nível, e tem chances (independentes entre si) de:
-   - Ganhar um **Pet** raro (gacha);
-   - Ganhar uma **Relíquia Encantada**;
-   - Ganhar um **Baú de Loot** fechado;
-   - Encontrar **Gemas 💎** soltas na água;
-   - Ativar um **Boost Global cosmético** de +20% XP nesta pescaria.
-6. Há um **cooldown** de 3.6 segundos entre pescarias (reduzível com o upgrade "Reflexos Rápidos").
-
-### Chance de fuga
-
-Cada peixe tem uma **dificuldade** ligada à sua raridade, e cada vara tem um **tier**. Se a dificuldade do peixe for maior que o tier da sua vara, ele tem chance de escapar da linha (até no máximo 75% de chance). Iscas, encantamentos de vara e alguns boosts reduzem essa chance de fuga.
-
-| Fator | Efeito na fuga |
+| Raridade | Ícone |
 |---|---|
-| Vara de tier mais alto | Reduz a chance de fuga contra peixes difíceis |
-| Isca ativa (`escapeReduction`) | Reduz a chance de fuga |
-| Encantamento de vara | Reduz a chance de fuga (até -60% no nível máximo) |
-| Boost "Escudo da Linha" | -15% de chance de fuga |
-| Elixires de Gemas | -20% ou -30% de chance de fuga |
+| Lixo | 🗑️ |
+| Comum | ⚪ |
+| Incomum | 🟢 |
+| Raro | 🔵 |
+| Raríssimo | 🟦 |
+| Épico | 🟣 |
+| Lendário | 🟡 |
+| Mítico | 🔴 |
+| Secreto | 🌀 |
+| Ancestral | 🌌 |
+| Exótico | 💠 |
+| Divino | ✨ |
+| **Extinto** (só durante Eventos Globais) | 🦴 |
 
----
+Capturas de raridade **Secreto** pra cima — e qualquer peixe
+Shiny/Sparkling — são anunciadas publicamente no canal de eventos do
+servidor, se um administrador tiver configurado um.
 
-## 🗺️ Biomas
+## Biomas
 
-Você pesca sempre em um bioma por vez — escolha o seu na tela **"Biomas"** do menu principal. Cada bioma desbloqueia com um nível mínimo e tem peixes exclusivos, cada vez mais raros e valiosos.
+10 biomas, cada um desbloqueado a partir de um **nível mínimo**, com
+seu próprio conjunto de peixes cada vez mais raros e valiosos:
 
-| Bioma | Nível mínimo | Dificuldade | Descrição |
-|---|---|---|---|
-| 🏞️ Lago Tranquilo | 1 | 1 | Águas calmas, ideal para começar a pescar. |
-| 🌊 Rio Correnteza | 6 | 2 | Correnteza forte esconde peixes maiores. |
-| 🐊 Pântano Sombrio | 12 | 3 | Água turva e criaturas estranhas. |
-| 🏖️ Costa Rochosa | 20 | 4 | O encontro do rio com o mar. |
-| 🪸 Recife de Coral | 30 | 5 | Águas coloridas cheias de vida. |
-| ⛵ Mar Aberto | 45 | 6 | Longe da costa, peixes grandes rondam. |
-| 🕳️ Fossa Abissal | 65 | 7 | Escuridão total nas profundezas. |
-| ❄️ Geleira Polar | 90 | 8 | Águas geladas e criaturas raras. |
-| 🌋 Rio de Lava | 130 | 9 | Pescaria lendária em magma vivo. |
-| ☁️ Ilhas Flutuantes | 180 | 10 | O bioma mítico no topo do mundo. |
-
-> Cada bioma tem peixes de todas as raridades, do **Comum** ao **Divino** — quanto mais avançado o bioma, mais valiosos são os peixes em cada raridade. Além disso, **todos** os biomas têm um peixe **Secreto 🌀**, um **Exótico 💠** e um **Divino ✨** próprios.
-
----
-
-## 🌟 Raridades de peixes
-
-Da mais comum para a mais rara:
-
-| # | Raridade | Ícone | Cor | Onde aparece |
-|---|---|---|---|---|
-| 1 | Lixo | 🗑️ | Cinza | Qualquer bioma (itens sem valor, tipo bota velha) |
-| 2 | Comum | ⚪ | Azul claro | Todos os biomas |
-| 3 | Incomum | 🟢 | Verde | Todos os biomas |
-| 4 | Raro | 🔵 | Azul | Todos os biomas |
-| 5 | Raríssimo | 🟦 | Turquesa | Todos os biomas |
-| 6 | Épico | 🟣 | Roxo | Todos os biomas |
-| 7 | Lendário | 🟡 | Amarelo | Todos os biomas |
-| 8 | Mítico | 🔴 | Vermelho | Todos os biomas |
-| 9 | **Secreto** | 🌀 | Roxo escuro | Todos os biomas (1 peixe único por bioma) |
-| 10 | Ancestral | 🌌 | Azul-marinho | Todos os biomas |
-| 11 | Exótico | 💠 | Ciano | Todos os biomas (1 peixe único por bioma) |
-| 12 | Divino | ✨ | Branco | Todos os biomas (1 peixe único por bioma) |
-| 13 | **Extinto** | 🦴 | Preto-azulado | **Só durante o Evento Global** (não pertence a nenhum bioma específico) |
-
-> 🔔 **Anúncio automático:** sempre que alguém pescar algo de raridade **Secreto pra cima** (Secreto, Ancestral, Exótico, Divino ou Extinto), o bot anuncia automaticamente no canal configurado por um administrador (veja [Configuração para administradores](#-configuração-para-administradores)).
-
----
-
-## ✨ Peixes Shiny ✨ e Sparkling 🌈
-
-Além da raridade normal, **qualquer peixe pescado** — de um Lambari comum até um Kraken Extinto — pode sair como uma variante especial:
-
-| Variante | Emoji | Chance aproximada | Efeito |
-|---|---|---|---|
-| **Shiny** | ✨ | ~1 em 150 | Dobra (**x2**) o valor de venda **e** o XP do peixe |
-| **Sparkling** | 🌈 | ~1 em 1.500 | Dobra (**x2**) o valor de venda **e** o XP do peixe |
-
-- A variante é sorteada **de forma independente** para cada peixe fisgado — pode acontecer com um peixe Comum ou com um Divino, tanto faz.
-- Peixes Shiny/Sparkling aparecem destacados no seu inventário e na tela de resultado da pescaria.
-- Assim como as capturas raras, **qualquer peixe Shiny ou Sparkling é anunciado automaticamente** no canal configurado pelos administradores.
-- Vender um peixe Shiny/Sparkling paga o dobro do preço normal dele.
-
----
-
-## 🦴 Evento Global: Criaturas Extintas
-
-Periodicamente, um **Evento Global** pode começar no servidor — desde que um administrador tenha configurado um canal com `/definir-canal-eventos`.
-
-### Como funciona
-
-- A cada **5 minutos**, o bot sorteia (12% de chance) se um novo evento começa no servidor.
-- Quando o evento começa, o bot **anuncia no canal configurado** e o evento fica ativo por **10 minutos**.
-- **Enquanto o evento estiver ativo**, toda pescaria de todo mundo no servidor — em **qualquer bioma** — tem uma chance extra (~12% por peixe fisgado) de vir uma **Criatura Extinta** em vez do peixe normal daquele bioma.
-- Ao fim dos 10 minutos, o bot anuncia o encerramento do evento no mesmo canal.
-
-### Criaturas Extintas disponíveis
-
-| Peixe | Emoji |
+| Bioma | Nível mínimo |
 |---|---|
-| Megalodon | 🦈 |
-| Lula Gigante | 🦑 |
-| Nessie | 🐲 |
-| Titanoboa | 🐍 |
-| Leviatã dos Tempos Perdidos | 🐋 |
-| Kraken | 🐙 |
-| Dragão Marinho Pré-Histórico | 🐉 |
+| 🏞️ Lago Tranquilo | 1 |
+| 🌊 Rio Correnteza | 6 |
+| 🐊 Pântano Sombrio | 12 |
+| 🏖️ Costa Rochosa | 20 |
+| 🪸 Recife de Coral | 30 |
+| ⛵ Mar Aberto | 45 |
+| 🕳️ Fossa Abissal | 65 |
+| ❄️ Geleira Polar | 90 |
+| 🌋 Rio de Lava | 130 |
+| ☁️ Ilhas Flutuantes | 180 |
 
-Essas criaturas têm os maiores valores de venda e XP do jogo — vale a pena ficar de olho nos anúncios do canal de eventos!
+Use o botão **Viajar** no menu principal para trocar de bioma assim
+que tiver o nível necessário.
 
----
+## Ligas
 
-## 🎣 Varas de pescar
-
-Cada vara define quantos peixes você pesca por rodada (`minCatch`–`maxCatch`), o bônus de sorte para peixes raros (`rareBoost`), o **tier** (usado contra a chance de fuga) e uma **habilidade exclusiva** que pode disparar a cada pescaria.
-
-| Vara | Preço | Tier | Peixes/pescaria | Bônus de sorte | Habilidade |
-|---|---|---|---|---|---|
-| 🎣 Vara Básica | Grátis | 0 | 1–2 | x1.0 | Nenhuma |
-| 🎋 Vara de Bambu | 🪙 350 | 1 | 1–3 | x1.15 | ⚡ Fisgada Crítica — 5% de chance de dobrar o XP da pescaria |
-| 🎣 Vara de Ferro | 🪙 1.200 | 2 | 2–4 | x1.35 | 🍀 Instinto Apurado — 8% de chance de +60% sorte nesta pescaria |
-| 🛠️ Vara Reforçada | 🪙 3.200 | 3 | 2–4 | x1.55 | 👯 Linha Dupla — 8% de chance de duplicar toda a captura |
-| ✨ Vara Dourada | 🪙 8.500 | 4 | 3–5 | x1.8 | ⚡ Toque de Midas — 10% de chance de x2.5 XP |
-| ⚙️ Vara de Carbono | 🪙 20.000 | 5 | 3–6 | x2.1 | 🎣 Fisgada Múltipla — 15% de chance de +2 peixes extras |
-| 💎 Vara de Diamante | 🪙 55.000 | 6 | 4–7 | x2.5 | 👯 Reflexo Cristalino — 15% de chance de duplicar a captura |
-| 🔮 Vara Mítica | 🪙 140.000 | 7 | 5–8 | x3.0 | 🍀 Chamado Abissal — 18% de chance de +120% sorte |
-| 🌌 Vara Ancestral | 🪙 350.000 | 8 | 6–9 | x3.6 | ⚡ Bênção dos Mares Antigos — 20% de chance de x3.5 XP |
-| 🔷 Vara de Mítrilo | 🪙 750.000 | 9 | 6–9 | x4.2 | 🎣 Fisgada Élfica — 22% de chance de +3 peixes extras |
-| 🔺 Vara de Adamantium | 🪙 1.600.000 | 10 | 7–10 | x5.0 | 👯 Fúria de Adamantium — 20% de chance de duplicar a captura |
-| 🌠 Vara Celestial | 🪙 3.500.000 | 11 | 8–12 | x6.0 | 🍀 Bênção Celestial — 25% de chance de +200% sorte |
-| 🕳️ Vara do Mestre do Vazio | 🪙 8.000.000 | 12 | 10–15 | x7.5 | ⚡ Colapso do Vazio — 30% de chance de x5 XP |
-
-> Comprar uma vara é **permanente** — depois de comprada, você pode trocar de volta para ela a qualquer momento sem custo. O botão fica verde ("Equipada"/"Selecionar") para varas já suas.
-
----
-
-## 🪱 Iscas
-
-Iscas são **compradas em quantidade** (não em "usos"). Você escolhe uma isca **selecionada**, que é consumida 1 unidade por pescaria enquanto houver estoque, aplicando seus bônus.
-
-| Isca | Preço/unidade | Multiplicador de XP | Bônus de sorte | Redução de fuga |
-|---|---|---|---|---|
-| 🪱 Minhoca | 🪙 10 | x1.2 | x1.1 | -2% |
-| 🦐 Isca de Camarão | 🪙 25 | x1.4 | x1.3 | -4% |
-| 🦑 Isca de Lula | 🪙 60 | x1.6 | x1.5 | -7% |
-| 🌟 Isca Dourada | 🪙 150 | x2.0 | x1.8 | -11% |
-| 💎 Isca de Cristal | 🪙 350 | x2.5 | x2.3 | -16% |
-| 🌑 Isca Abissal | 🪙 800 | x3.2 | x3.0 | -24% |
-| 🕳️ Isca do Vazio | 🪙 1.800 | x4.2 | x4.0 | -35% |
-
----
-
-## 🚤 Barcos
-
-Barcos concedem **peixes extras garantidos** por pescaria, além do que a vara já dá. São comprados uma única vez.
-
-| Barco | Preço | Peixes extras |
-|---|---|---|
-| 🛶 Canoa de Pesca | 🪙 2.000 | +1 |
-| 🚣 Barco a Remo | 🪙 7.000 | +2 |
-| 🚤 Lancha Motorizada | 🪙 22.000 | +3 |
-| 🛥️ Iate de Luxo | 🪙 60.000 | +4 |
-| 🚢 Navio Baleeiro | 🪙 160.000 | +6 |
-| ⚓ Nau Almirante | 🪙 400.000 | +8 |
-
----
-
-## 🐾 Pets
-
-Pets **não são comprados** — são obtidos por pura sorte (gacha) a cada pescaria, com chance base de **1 em 10.000**. Quando o gacha acerta, a raridade do pet é sorteada e, dentro dela, um pet específico. O pet de maior raridade entre os seus é **automaticamente equipado**.
-
-| Raridade | Peso (chance relativa) |
-|---|---|
-| Comum | 50% |
-| Raro | 28% |
-| Épico | 15% |
-| Lendário | 5.5% |
-| Mítico | 1.3% |
-| Ancestral | 0.2% |
-
-| Pet | Raridade | Bônus |
-|---|---|---|
-| 🐱 Gato Pescador | Comum | +3% XP, +2% moedas |
-| 🦆 Pato Sortudo | Comum | +3% XP, +2% sorte |
-| 🦦 Lontra Curiosa | Raro | +8% XP, +5% moedas |
-| 🕊️ Gaivota Guia | Raro | +8% XP, +5% sorte |
-| 🦭 Foca Amiga | Épico | +15% XP, +10% moedas |
-| 🐬 Golfinho Veloz | Épico | +15% XP, +10% sorte |
-| 🐲 Dragãozinho | Lendário | +25% XP, +18% moedas |
-| 🦅 Grifo Celeste | Lendário | +25% XP, +18% sorte |
-| 🔥 Fênix Marinha | Mítico | +40% XP, +30% moedas, +10% sorte |
-| 🐙 Kraken Filhote | Mítico | +40% XP, +30% sorte, +10% moedas |
-| ✨ Espírito Guardião | Ancestral | +70% XP, +50% moedas, +25% sorte |
-| 🌌 Leviatã Ancestral | Ancestral | +70% XP, +50% sorte, +25% moedas |
-
-Todos os pets obtidos ficam guardados na sua coleção — você pode ter vários, mesmo repetidos.
-
----
-
-## 🔮 Relíquias Encantadas e Encantamento de Vara
-
-- **Relíquias Encantadas** 🔮 são um drop raríssimo (chance base de **1 em 4.000** por pescaria).
-- Use-as (junto com moedas) na tela **Encantamentos** para subir o nível de encantamento da vara **atualmente equipada**.
-- O encantamento é salvo **por vara** — trocar de vara não zera o progresso da vara antiga.
-- Nível máximo de encantamento: **15**.
-
-Por nível de encantamento, a vara equipada ganha:
-
-| Bônus | Por nível |
-|---|---|
-| Chance de peixes raros | +3% |
-| XP ganho | +2% |
-| Redução de chance de fuga | -1.5% (até -60% no nível máximo) |
-
-O custo em relíquias e moedas cresce a cada nível.
-
----
-
-## 📦 Baús de Loot
-
-Baús caem **fechados** no seu inventário enquanto você pesca (chance base de ~1 em 12 por pescaria) — abra-os manualmente na tela **Baús**.
-
-| Baú | Peso do sorteio | Moedas | Peixes | Raridades dos peixes | Chance de item bônus |
-|---|---|---|---|---|---|
-| 📦 Comum | 60% | 🪙 30–90 | 1–2 | Comum, Incomum | 12% |
-| 🎁 Raro | 25% | 🪙 150–450 | 1–3 | Incomum, Raro | 25% |
-| 💜 Épico | 11.5% | 🪙 600–1.500 | 2–3 | Raro, Raríssimo | 40% |
-| 🏆 Lendário | 3.2% | 🪙 2.000–5.000 | 2–4 | Raríssimo, Épico | 60% |
-| 🌌 Mítico | 0.3% | 🪙 8.000–20.000 | 3–5 | Épico, Lendário, Mítico | 85% |
-
-Os itens bônus incluem iscas em quantidade, usos de boosts, Relíquias Encantadas e até Gemas — variando conforme o baú.
-
----
-
-## 📈 Upgrades Permanentes
-
-Comprados com moedas na loja, os upgrades são **permanentes** e podem ser comprados várias vezes até o nível máximo (o custo cresce a cada nível).
-
-| Upgrade | Efeito por nível | Nível máximo |
-|---|---|---|
-| 🍀 Sorte do Pescador | +4% de chance de peixes raros | 20 |
-| ⚡ Reflexos Rápidos | -0.25s no cooldown entre pescarias | 10 |
-
----
-
-## 🧪 Boosts (consumíveis)
-
-Boosts são comprados com moedas (ou obtidos em baús) e têm um número fixo de **usos**. Vários boosts diferentes podem estar ativos ao mesmo tempo — os efeitos se combinam.
-
-| Boost | Preço | Usos | Efeito |
-|---|---|---|---|
-| 💹 Impulso de Vendas | 🪙 800 | 5 | +50% no valor de venda |
-| 🧪 Poção da Sorte | 🪙 900 | 5 | +50% na chance de peixes raros |
-| 📘 Elixir de Experiência | 🪙 1.000 | 6 | +60% de XP |
-| 🕸️ Rede Reforçada | 🪙 1.100 | 6 | +2 peixes extras por pescaria |
-| 🛡️ Escudo da Linha | 🪙 950 | 6 | -15% de chance de fuga |
-| 🌟 Super Impulso do Pescador | 🪙 3.800 | 5 | Combo: +30% XP, +30% sorte, +30% venda, +1 peixe extra, -10% fuga |
-
----
-
-## 💎 Gemas 💎 e Elixires
-
-Gemas são uma **moeda especial**, separada das moedas normais. Você as obtém principalmente pelo Presente Diário, por uma chance mínima a cada pescaria (1 em 5.000) e em baús Lendários/Míticos.
-
-Use Gemas na **Loja de Gemas** para ativar Elixires — diferente dos boosts normais, eles duram um **tempo real fixo** (comprar de novo enquanto já ativo **estende** a duração):
-
-| Elixir | Preço | Duração | Efeito |
-|---|---|---|---|
-| 🔷 Elixir de Mítrilo | 💎 15 | 5 minutos | +100% XP, +80% sorte, +50% venda, +2 peixes extras, -20% fuga |
-| 🔺 Elixir de Adamantium | 💎 40 | 20 minutos | +200% XP, +150% sorte, +100% venda, +3 peixes extras, -30% fuga |
-
----
-
-## 🎁 Presente Diário e Sequência (Streak)
-
-### Presente Diário
-
-- Resgate uma vez por dia no menu principal — reseta à meia-noite (UTC).
-- Base: **🪙 150 moedas** + **💎 2 Gemas**, crescendo **+25 moedas por dia de sequência** (até o dia 30).
-- A cada **5 dias de sequência**, ganha **+5 Gemas extras**.
-- Pular um dia inteiro reinicia a sequência.
-
-### Sequência de Pescarias (Streak de XP)
-
-- Pescar em dias consecutivos aumenta um multiplicador de XP **permanente**: **+1% de XP por dia**, até **+30%** no dia 30.
-- Pular um dia sem pescar reinicia a sequência.
-
----
-
-## 🏅 Ligas e Títulos
-
-### Ligas (cosméticas, baseadas em nível)
+Sua liga sobe junto com seu nível e determina, entre outras coisas,
+quais títulos você pode comprar na Loja da Liga:
 
 | Liga | Nível mínimo |
 |---|---|
@@ -363,85 +111,251 @@ Use Gemas na **Loja de Gemas** para ativar Elixires — diferente dos boosts nor
 | 💎 Diamante | 280 |
 | 👑 Mestre Pescador | 420 |
 
-### Títulos da Loja da Liga
+O nível máximo do jogo é **500**.
 
-Cada título exige que você já tenha alcançado a liga correspondente.
+## Progressão
 
-| Título | Preço | Liga exigida |
+- **Níveis e XP:** cada pescaria dá XP. Subir de nível libera novos
+  biomas, novas varas/iscas e dá recompensas em moedas.
+- **Varas e iscas por nível e área:** cada vara e cada isca agora
+  exige um **nível mínimo** para ser comprada, alinhado à área
+  (bioma) a que pertence — então seu equipamento sempre acompanha o
+  ritmo dos biomas que você já desbloqueou. Itens ainda bloqueados
+  aparecem com 🔒 na loja, mostrando o nível necessário.
+- **Sequência diária de pesca:** pescar todos os dias mantém um
+  bônus permanente de XP vivo — faltar um dia inteiro reinicia a
+  contagem.
+
+## Equipamento
+
+### Varas
+
+13 varas, cada uma com preço, nível mínimo, poder de captura e uma
+**habilidade exclusiva** (crítico de XP, duplicar a captura, surto
+de sorte, peixes extras, etc.):
+
+| Vara | Nível mín. | Área | Preço | Captura | Habilidade |
+|---|---|---|---|---|---|
+| 🎣 Vara Básica | 1 | Lago Tranquilo | Grátis | 1-2 | — |
+| 🎋 Vara de Bambu | 1 | Lago Tranquilo | 🪙 1.000 | 1-3 | Fisgada Crítica |
+| 🎣 Vara de Ferro | 6 | Rio Correnteza | 🪙 3.500 | 2-4 | Instinto Apurado |
+| 🛠️ Vara Reforçada | 12 | Pântano Sombrio | 🪙 9.000 | 2-4 | Linha Dupla |
+| ✨ Vara Dourada | 20 | Costa Rochosa | 🪙 24.000 | 3-5 | Toque de Midas |
+| ⚙️ Vara de Carbono | 30 | Recife de Coral | 🪙 60.000 | 3-6 | Fisgada Múltipla |
+| 💎 Vara de Diamante | 45 | Mar Aberto | 🪙 160.000 | 4-7 | Reflexo Cristalino |
+| 🔮 Vara Mítica | 65 | Fossa Abissal | 🪙 400.000 | 5-8 | Chamado Abissal |
+| 🌌 Vara Ancestral | 90 | Geleira Polar | 🪙 950.000 | 6-9 | Bênção dos Mares Antigos |
+| 🔷 Vara de Mítrilo | 130 | Rio de Lava | 🪙 2.000.000 | 6-9 | Fisgada Élfica |
+| 🔺 Vara de Adamantium | 180 | Ilhas Flutuantes | 🪙 4.200.000 | 7-10 | Fúria de Adamantium |
+| 🌠 Vara Celestial | 250 | Ilhas Flutuantes | 🪙 9.000.000 | 8-12 | Bênção Celestial |
+| 🕳️ Vara do Mestre do Vazio | 350 | Ilhas Flutuantes | 🪙 20.000.000 | 10-15 | Colapso do Vazio |
+
+Reequipar uma vara que você já comprou é sempre de graça — o preço
+só vale na primeira compra.
+
+### Iscas
+
+7 iscas, cada uma com usos consumíveis, também limitadas por nível e
+área. Comprar a isca que já está selecionada empilha os usos em vez
+de travar a compra:
+
+| Isca | Nível mín. | Área | Preço (cada) | XP | Chance rara | Redução de fuga |
+|---|---|---|---|---|---|---|
+| 🪱 Minhoca | 1 | Lago Tranquilo | 🪙 10 | x1.2 | x1.1 | -2% |
+| 🦐 Isca de Camarão | 6 | Rio Correnteza | 🪙 25 | x1.4 | x1.3 | -4% |
+| 🦑 Isca de Lula | 20 | Costa Rochosa | 🪙 60 | x1.6 | x1.5 | -7% |
+| 🌟 Isca Dourada | 30 | Recife de Coral | 🪙 150 | x2.0 | x1.8 | -11% |
+| 💎 Isca de Cristal | 45 | Mar Aberto | 🪙 350 | x2.5 | x2.3 | -16% |
+| 🌑 Isca Abissal | 65 | Fossa Abissal | 🪙 800 | x3.2 | x3.0 | -24% |
+| 🕳️ Isca do Vazio | 130 | Rio de Lava | 🪙 1.800 | x4.2 | x4.0 | -35% |
+
+### Barcos
+
+Aumentam quantos peixes você fisga por pescaria:
+
+| Barco | Preço | Peixes extras |
 |---|---|---|
-| 🥉 Iniciante das Águas | Grátis | Bronze |
-| 🥈 Pescador Persistente | 🪙 1.500 | Prata |
-| 🥇 Mestre da Linha | 🪙 6.000 | Ouro |
-| 💠 Lenda de Platina | 🪙 18.000 | Platina |
-| 💎 Caçador Abissal | 🪙 45.000 | Diamante |
-| 👑 Mestre Supremo dos Mares | 🪙 120.000 | Mestre Pescador |
+| 🛶 Canoa de Pesca | 🪙 6.000 | +1 |
+| 🚣 Barco a Remo | 🪙 21.000 | +2 |
+| 🚤 Lancha Motorizada | 🪙 66.000 | +3 |
+| 🛥️ Iate de Luxo | 🪙 180.000 | +4 |
+| 🚢 Navio Baleeiro | 🪙 480.000 | +6 |
+| ⚓ Nau Almirante | 🪙 1.200.000 | +8 |
 
-### Títulos Especiais (concedidos por ADM)
+### Upgrades permanentes
 
-Administradores podem usar `/definir-titulo` para dar um título **customizado** (texto + emoji) a qualquer jogador, independente da Loja da Liga — ótimo para donos de servidor, moderadores, etc. Esse título tem prioridade de exibição sobre o título comprado.
+Comprados na loja e melhorados nível por nível — cada nível fica
+mais caro que o anterior:
 
----
+| Upgrade | Efeito por nível | Nível máximo | Custo inicial |
+|---|---|---|---|
+| 🍀 Sorte do Pescador | +4% de chance de peixes raros | 20 | 🪙 2.500 |
+| ⚡ Reflexos Rápidos | -0.25s no tempo de espera entre pescarias | 10 | 🪙 2.200 |
 
-## 🆙 Nível, XP e Prestígio
+### Encantamentos de vara
 
-- **Nível máximo do jogo:** 500.
-- Cada nível exige progressivamente mais XP para subir.
-- Subir de nível dá uma **recompensa em moedas**.
+Use **Relíquias Encantadas** (item raro obtido pescando) na tela de
+Encantamentos para fortalecer permanentemente a vara equipada — até
+o nível 15, cada nível dá +3% de chance de peixe raro, +2% de XP e
+-1.5% de chance de fuga. Trocar de vara não perde o progresso de
+encantamento — cada vara guarda o seu próprio nível.
 
-### Prestígio ⭐
+## Prestígio
 
-Ao alcançar **nível 100** e ter pelo menos **🪙 50.000 moedas**, você pode **Prestigiar**:
+Ao chegar no **nível 100** com **🪙 50.000 ou mais**, você pode
+prestigiar. Isso reinicia nível, XP, moedas, vara, barco, bioma e
+encantamentos — mas concede um **nível de prestígio permanente**
+(até 20 níveis), com bônus para sempre:
 
-- **Reseta:** nível, XP, moedas, vara, barco, bioma, upgrades permanentes, encantamentos de vara e boosts ativos.
-- **Mantém:** pets, relíquias, baús guardados, Fischpédia e títulos.
-- **Ganha:** +1 nível de Prestígio **permanente**, concedendo bônus passivos para sempre:
-  - +5% de XP por nível de prestígio;
-  - +5% de moedas ao vender por nível de prestígio;
-  - +2% de chance de peixes raros por nível de prestígio.
-- Pode ser feito até **20 vezes**.
+- +5% XP por nível de prestígio
+- +5% moedas por nível de prestígio
+- +2% sorte por nível de prestígio
 
----
+Pets, relíquias, baús, títulos e sua Fischpédia **não são
+perdidos** ao prestigiar.
 
-## 📖 Fischpédia
+## Boosts
 
-Use `/fischpedia` (ou o botão no menu) para ver sua coleção completa, estilo Pokédex, organizada por bioma (e uma página extra para itens de Lixo e outra para **Criaturas Extintas** 🦴). Peixes ainda não descobertos aparecem como "🔒 não descoberto" até você pescar um pela primeira vez.
+Comprados com moedas na loja, cada um dura um número fixo de usos e
+vários podem ficar ativos ao mesmo tempo, com efeitos combinados:
 
-> A Fischpédia registra o peixe **base** — capturar a mesma espécie em versão Shiny/Sparkling não cria uma entrada nova, mas conta normalmente para a sua contagem de capturas.
+| Boost | Preço | Usos | Efeito |
+|---|---|---|---|
+| 💹 Impulso de Vendas | 🪙 800 | 5 vendas | +50% no preço de venda |
+| 🧪 Poção da Sorte | 🪙 900 | 5 pescarias | +50% chance de peixe raro |
+| 📘 Elixir de Experiência | 🪙 1.000 | 6 pescarias | +60% XP |
+| 🕸️ Rede Reforçada | 🪙 1.100 | 6 pescarias | +2 peixes extras |
+| 🛡️ Escudo da Linha | 🪙 950 | 6 pescarias | -15% chance de fuga |
+| 🌟 Super Impulso do Pescador | 🪙 3.800 | 5 pescarias | +30% XP, +30% sorte, +30% venda, +1 peixe extra, -10% fuga |
 
----
+## Gemas e Elixires
 
-## ⚙️ Configuração para administradores
+- **Gemas 💎** são uma moeda especial, separada das moedas normais —
+  ganhas no Presente Diário, por uma chance mínima em cada pescaria
+  (1 em 5.000), ou como item bônus em baús Lendários/Míticos.
+- Use Gemas na **Loja de Gemas** para comprar Elixires temporários,
+  que duram um tempo real fixo. Comprar um elixir que já está ativo
+  **estende a duração** em vez de desperdiçar:
 
-### `/definir-canal-eventos`
+| Elixir | Preço | Duração | Efeito |
+|---|---|---|---|
+| 🔷 Elixir de Mítrilo | 💎 15 | 5 minutos | +100% XP, +80% sorte, +50% venda, +2 peixes extras, -20% fuga |
+| 🔺 Elixir de Adamantium | 💎 40 | 20 minutos | +200% XP, +150% sorte, +100% venda, +3 peixes extras, -30% fuga |
 
-Define o canal de texto onde o bot vai postar automaticamente:
+## Presente Diário
 
-1. **Anúncios de capturas raras** — sempre que alguém pescar um peixe de raridade **Secreto pra cima** (Secreto 🌀, Ancestral 🌌, Exótico 💠, Divino ✨ ou Extinto 🦴), ou **qualquer** peixe **Shiny ✨/Sparkling 🌈**.
-2. **Início e fim de Eventos Globais** de Criaturas Extintas.
+Resgatável uma vez por dia no menu principal:
 
-Apenas administradores do servidor podem usar este comando.
+- Moedas: começa em 🪙 150 e cresce +25 por dia de sequência
+  (até o dia 30).
+- Gemas: 💎 2 por resgate, com +5 de bônus a cada 5 dias seguidos
+  resgatando.
 
-### `/definir-titulo`, `/remover-titulo`, `/definir-icone-titulo`
+## Pets
 
-Permitem conceder, remover ou trocar o ícone de um título especial customizado, dado diretamente a um jogador específico (independente da Loja da Liga).
+Pets aparecem com uma chance mínima a cada pescaria (uma espécie de
+"gacha"). Você acumula todos os que já pegou e o melhor é equipado
+automaticamente, somando bônus permanentes de XP, moedas e/ou sorte:
 
----
+| Raridade | Pets | Bônus (XP / Moedas / Sorte) |
+|---|---|---|
+| ⚪ Comum | 🐱 Gato Pescador · 🦆 Pato Sortudo | +3% XP · +2% moedas ou sorte |
+| 🔵 Raro | 🦦 Lontra Curiosa · 🕊️ Gaivota Guia | +8% XP · +5% moedas ou sorte |
+| 🟣 Épico | 🦭 Foca Amiga · 🐬 Golfinho Veloz | +15% XP · +10% moedas ou sorte |
+| 🟡 Lendário | 🐲 Dragãozinho · 🦅 Grifo Celeste | +25% XP · +18% moedas ou sorte |
+| 🔴 Mítico | 🔥 Fênix Marinha · 🐙 Kraken Filhote | +40% XP · +10-30% moedas e sorte |
+| 🌌 Ancestral | ✨ Espírito Guardião · 🌌 Leviatã Ancestral | +70% XP · +25-50% moedas e sorte |
 
-## 📚 Glossário rápido
+## Baús e Relíquias
 
-| Termo | Significado |
+- **Baús de loot** caem com chance mínima (cerca de 1 em 12) durante
+  a pesca, em 5 raridades: 📦 Comum, 🎁 Raro, 💜 Épico, 🏆 Lendário e
+  🌌 Mítico. Ficam guardados fechados no inventário — abra um por
+  vez ou use **"Abrir Todos"**.
+- **🔮 Relíquia Encantada:** item raro (chance de 1 em 4.000 por
+  pescaria) usado para encantar sua vara equipada.
+
+## Evento Global: Criaturas Extintas
+
+Quando um administrador do servidor configura um canal de eventos
+(`/definir-canal-eventos`), o bot passa a anunciar automaticamente,
+**a cada hora**, um **Evento Global** de 5 minutos: durante essa
+janela, criaturas 🦴 **Extintas** — Megalodon, Kraken, Nessie, Lula
+Gigante e outras lendas perdidas — podem aparecer em **qualquer
+bioma**, para qualquer jogador que estiver pescando no servidor.
+
+Elas são bem mais difíceis de fisgar que qualquer peixe normal — a
+chance de fuga depende muito da sua vara equipada (varas fracas
+quase sempre a perdem; só varas de ponta, a partir da Vara de
+Mítrilo, dão uma chance real de sucesso) — mas valem recompensas
+enormes de moedas e XP. Vale a pena empilhar sorte (iscas, poções,
+elixires, Efeitos Globais) antes do próximo evento aparecer.
+
+Ao final do evento, o bot publica um **ranking com os 4 jogadores
+que mais capturaram criaturas Extintas** naquela janela (🥇🥈🥉🏅). Um
+administrador também pode configurar um cargo ou pessoa para ser
+mencionado sempre que um evento começar
+(`/definir-mencao-eventos`).
+
+## Títulos
+
+Comprados na Loja da Liga conforme você sobe de nível/liga:
+
+| Título | Liga exigida | Preço |
+|---|---|---|
+| 🥉 Iniciante das Águas | Bronze | Grátis |
+| 🥈 Pescador Persistente | Prata | 🪙 1.500 |
+| 🥇 Mestre da Linha | Ouro | 🪙 6.000 |
+| 💠 Lenda de Platina | Platina | 🪙 18.000 |
+| 💎 Caçador Abissal | Diamante | 🪙 45.000 |
+| 👑 Mestre Supremo dos Mares | Mestre Pescador | 🪙 120.000 |
+
+Administradores também podem conceder um **título especial
+customizado** a qualquer jogador (`/definir-titulo`, com emoji
+próprio via `/definir-icone-titulo`, e removível com
+`/remover-titulo`) — por exemplo, o dono do servidor dando a si
+mesmo o título "Dono". Um título especial tem prioridade sobre os
+títulos comprados e aparece em destaque no perfil.
+
+## Fischpédia e Ranking
+
+- `/fischpedia` mostra sua "Pokédex" pessoal de peixes já
+  capturados — raridade, valor, XP e bioma de cada um, paginada por
+  bioma. Peixes ainda não descobertos aparecem como "🔒 ???". Esse
+  progresso é permanente e não é perdido ao vender seu inventário.
+- O menu principal tem um botão de **Ranking**, mostrando os
+  pescadores em destaque no servidor por nível/XP.
+
+## Perfil
+
+`/perfil` mostra um cartão compacto com:
+
+- **PROGRESSO** — liga, nível, barra de XP e área (bioma) atual.
+- **ESTATÍSTICAS** — nível de Sorte, nível de Reflexos e total de
+  peixes já pescados.
+- **EQUIPAMENTO** — vara, barco e isca equipados.
+- **DINHEIRO** — moedas, gemas e relíquias.
+- Título ativo, pet ativo e um resumo da coleção (Fischpédia + baús
+  guardados).
+- **RANK** no rodapé, mostrando sua posição no ranking geral de
+  pescadores.
+
+## Comandos disponíveis
+
+| Comando | O que faz |
 |---|---|
-| **Cabana do Pescador** | O menu principal, aberto com `/pescar` |
-| **Bioma** | Área de pesca com seu próprio conjunto de peixes |
-| **Rareboost** | Multiplicador que aumenta a chance de peixes raros |
-| **Tier (vara)** | "Força" da vara contra a dificuldade dos peixes |
-| **Fuga (escape)** | Chance de um peixe sorteado escapar antes de entrar no inventário |
-| **Gacha** | Sorteio de item raro (pets, relíquias) independente de outras mecânicas |
-| **Streak** | Sequência de dias consecutivos (pescando ou resgatando o Presente Diário) |
-| **Prestígio** | Reset voluntário de progresso em troca de bônus permanentes |
-| **Shiny / Sparkling** | Variantes especiais de qualquer peixe, com valor e XP em dobro |
-| **Evento Global** | Janela de tempo aleatória em que Criaturas Extintas podem ser pescadas em qualquer bioma |
+| `/pescar` | Abre sua cabana de pescador (menu principal, privado) |
+| `/perfil [jogador]` | Mostra seu perfil ou o de outro membro, publicamente |
+| `/fischpedia` | Sua "Pokédex" de peixes já capturados |
+| `/definir-canal-eventos` | (ADM) Define o canal de capturas raras e Eventos Globais |
+| `/definir-mencao-eventos` | (ADM) Define quem é marcado (@) quando um Evento Global começa |
+| `/definir-titulo` | (ADM) Concede um título especial customizado a um jogador |
+| `/definir-icone-titulo` | (ADM) Troca o emoji de um título especial já concedido |
+| `/remover-titulo` | (ADM) Remove o título especial de um jogador |
 
----
+## Multiservidor
 
-*Boa pesca! 🎣*
+Seu progresso (moedas, nível, inventário, iscas, pets, tudo) é salvo
+pela sua conta do Discord, não por servidor — então você joga com a
+mesma conta em qualquer servidor onde o bot estiver presente. Tudo é
+salvo automaticamente a cada ação, sem precisar fazer nada.
