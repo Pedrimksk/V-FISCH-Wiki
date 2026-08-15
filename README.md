@@ -1,9 +1,24 @@
-[README (2).md](https://github.com/user-attachments/files/31008411/README.2.md)# 🎣 V-FISCH — Wiki do Jogador
+[README (3).md](https://github.com/user-attachments/files/31094133/README.3.md)
+# 🎣 V-FISCH — Wiki do Jogador
 
 Bem-vindo à cabana do pescador! Este bot transforma seu servidor num
 jogo completo de pesca: pescarias, biomas, loja, pets, baús, eventos
 globais e um sistema de progressão bem recheado. Tudo funciona por
 menus e botões — não precisa decorar nada.
+
+## Novidades desta atualização
+
+- 🚀 **Bot mais rápido e estável** — melhorias internas deixaram as
+  respostas mais ágeis, principalmente em servidores grandes ou com
+  muita gente pescando ao mesmo tempo.
+- 🧪 **Poções renovadas** — agora compradas em **estoque** e ativadas
+  quando você quiser, durando um **tempo real fixo** em vez de um
+  número de usos (veja [Poções](#poções)).
+- 🧹 **Novo upgrade: Faro Apurado** — reduz a chance de pescar Lixo
+  (veja [Upgrades permanentes](#upgrades-permanentes)).
+- 🌐 **Efeitos Globais** — buffs comprados com Gemas que beneficiam
+  **o servidor inteiro**, não só quem comprou (veja [Efeitos
+  Globais](#efeitos-globais)).
 
 ## Índice
 
@@ -15,7 +30,8 @@ menus e botões — não precisa decorar nada.
 - [Progressão](#progressão)
 - [Equipamento](#equipamento)
 - [Prestígio](#prestígio)
-- [Boosts](#boosts)
+- [Poções](#poções)
+- [Efeitos Globais](#efeitos-globais)
 - [Gemas e Elixires](#gemas-e-elixires)
 - [Presente Diário](#presente-diário)
 - [Pets](#pets)
@@ -35,8 +51,9 @@ menus e botões — não precisa decorar nada.
 - No menu você navega por botões entre **Pescar, Inventário, Loja,
   Perfil, Ranking e Viajar** (trocar de bioma).
 - Use `/perfil` a qualquer momento para ver seu progresso
-  publicamente no canal — ou marque outro membro (`/perfil @alguém`)
-  para ver o dele.
+  publicamente no canal — marque outro membro (`/perfil @alguém`) ou
+  busque pelo nick de qualquer jogador registrado no bot, mesmo fora
+  do servidor atual.
 
 ## Como pescar
 
@@ -44,8 +61,8 @@ menus e botões — não precisa decorar nada.
   depende da sua **vara** e do seu **barco**.
 - Peixes raros em biomas avançados podem **escapar da linha** se sua
   vara não for forte o bastante para aquele nível de dificuldade.
-  Uma vara melhor, uma isca melhor ou boosts ativos reduzem essa
-  chance de fuga.
+  Uma vara melhor, uma isca melhor ou poções/elixires ativos reduzem
+  essa chance de fuga.
 - Volta e meia um peixe sai como uma variante especial:
   - ✨ **Shiny** — vale **2x** em moedas e XP.
   - 🌈 **Sparkling** — muito mais rara, vale **4x** em moedas e XP.
@@ -117,11 +134,11 @@ O nível máximo do jogo é **500**.
 
 - **Níveis e XP:** cada pescaria dá XP. Subir de nível libera novos
   biomas, novas varas/iscas e dá recompensas em moedas.
-- **Varas e iscas por nível e área:** cada vara e cada isca agora
-  exige um **nível mínimo** para ser comprada, alinhado à área
-  (bioma) a que pertence — então seu equipamento sempre acompanha o
-  ritmo dos biomas que você já desbloqueou. Itens ainda bloqueados
-  aparecem com 🔒 na loja, mostrando o nível necessário.
+- **Varas e iscas por nível e área:** cada vara e cada isca exige um
+  **nível mínimo** para ser comprada, alinhado à área (bioma) a que
+  pertence — então seu equipamento sempre acompanha o ritmo dos
+  biomas que você já desbloqueou. Itens ainda bloqueados aparecem
+  com 🔒 na loja, mostrando o nível necessário.
 - **Sequência diária de pesca:** pescar todos os dias mantém um
   bônus permanente de XP vivo — faltar um dia inteiro reinicia a
   contagem.
@@ -187,10 +204,11 @@ Aumentam quantos peixes você fisga por pescaria:
 Comprados na loja e melhorados nível por nível — cada nível fica
 mais caro que o anterior:
 
-| Upgrade | Efeito por nível | Nível máximo | Custo inicial |
-|---|---|---|---|
-| 🍀 Sorte do Pescador | +4% de chance de peixes raros | 20 | 🪙 2.500 |
-| ⚡ Reflexos Rápidos | -0.25s no tempo de espera entre pescarias | 10 | 🪙 2.200 |
+| Upgrade | Efeito por nível | Nível máximo |
+|---|---|---|
+| 🍀 Sorte do Pescador | +4% de chance de peixes raros | 20 |
+| ⚡ Reflexos Rápidos | -0.25s no tempo de espera entre pescarias | 10 |
+| 🧹 Faro Apurado | -6% na chance de pescar Lixo | 10 |
 
 ### Encantamentos de vara
 
@@ -214,28 +232,49 @@ encantamentos — mas concede um **nível de prestígio permanente**
 Pets, relíquias, baús, títulos e sua Fischpédia **não são
 perdidos** ao prestigiar.
 
-## Boosts
+## Poções
 
-Comprados com moedas na loja, cada um dura um número fixo de usos e
-vários podem ficar ativos ao mesmo tempo, com efeitos combinados:
+Compradas com moedas na **Loja de Poções**, as poções agora ficam
+guardadas no seu **estoque** — comprar não ativa nada na hora. Use o
+comando `/pocoes` (ou o botão **Minhas Poções**) quando quiser
+ativar uma: uma vez ativada, ela dura um **tempo real fixo**, e
+usar de novo enquanto uma já está ativa **estende** a duração em vez
+de desperdiçar. Várias poções diferentes podem ficar ativas ao
+mesmo tempo, com efeitos combinados:
 
-| Boost | Preço | Usos | Efeito |
+| Poção | Preço | Duração | Efeito |
 |---|---|---|---|
-| 💹 Impulso de Vendas | 🪙 800 | 5 vendas | +50% no preço de venda |
-| 🧪 Poção da Sorte | 🪙 900 | 5 pescarias | +50% chance de peixe raro |
-| 📘 Elixir de Experiência | 🪙 1.000 | 6 pescarias | +60% XP |
-| 🕸️ Rede Reforçada | 🪙 1.100 | 6 pescarias | +2 peixes extras |
-| 🛡️ Escudo da Linha | 🪙 950 | 6 pescarias | -15% chance de fuga |
-| 🌟 Super Impulso do Pescador | 🪙 3.800 | 5 pescarias | +30% XP, +30% sorte, +30% venda, +1 peixe extra, -10% fuga |
+| 💹 Poção de Vendas | 🪙 700 | 15 min | +50% no preço de venda |
+| 🛡️ Poção do Escudo | 🪙 850 | 18 min | -15% chance de fuga |
+| 🧪 Poção da Sorte | 🪙 950 | 20 min | +50% chance de peixe raro |
+| 📘 Poção de Experiência | 🪙 1.100 | 25 min | +60% XP |
+| 🕸️ Poção da Rede Reforçada | 🪙 1.300 | 30 min | +2 peixes extras |
+| 🌟 Poção Suprema do Pescador | 🪙 4.200 | 45 min | +30% XP, +30% sorte, +30% venda, +1 peixe extra, -10% fuga |
+
+## Efeitos Globais
+
+Comprados com Gemas 💎 na Loja de Efeitos Globais, mas diferente dos
+Elixires pessoais: um Efeito Global beneficia **todo mundo que
+estiver pescando no servidor** enquanto durar, não só quem comprou.
+Só um Efeito Global fica ativo por vez em cada servidor — comprar o
+mesmo efeito enquanto ele já está ativo estende a duração em vez de
+desperdiçar:
+
+| Efeito | Preço | Duração | Efeito |
+|---|---|---|---|
+| 🌊 Frenesi de Cardume | 💎 60 | 10 min | +30% XP, +20% sorte, +1 peixe extra pra todos |
+| 🪙 Corrida do Ouro | 💎 70 | 10 min | +40% no preço de venda, +10% XP pra todos |
+| 🕊️ Águas Calmas | 💎 55 | 10 min | -25% chance de fuga, +15% sorte pra todos |
+| 🌟 Maré da Fartura | 💎 150 | 15 min | +50% XP, +40% sorte, +30% venda, +2 peixes extras, -20% fuga pra todos |
 
 ## Gemas e Elixires
 
 - **Gemas 💎** são uma moeda especial, separada das moedas normais —
-  ganhas no Presente Diário, por uma chance mínima em cada pescaria
-  (1 em 5.000), ou como item bônus em baús Lendários/Míticos.
-- Use Gemas na **Loja de Gemas** para comprar Elixires temporários,
-  que duram um tempo real fixo. Comprar um elixir que já está ativo
-  **estende a duração** em vez de desperdiçar:
+  ganhas no Presente Diário, por uma chance mínima em cada pescaria,
+  ou como item bônus em baús Lendários/Míticos.
+- Use Gemas na **Loja de Gemas** para comprar Elixires pessoais
+  temporários, que duram um tempo real fixo. Comprar um elixir que
+  já está ativo **estende a duração** em vez de desperdiçar:
 
 | Elixir | Preço | Duração | Efeito |
 |---|---|---|---|
@@ -272,8 +311,8 @@ automaticamente, somando bônus permanentes de XP, moedas e/ou sorte:
   a pesca, em 5 raridades: 📦 Comum, 🎁 Raro, 💜 Épico, 🏆 Lendário e
   🌌 Mítico. Ficam guardados fechados no inventário — abra um por
   vez ou use **"Abrir Todos"**.
-- **🔮 Relíquia Encantada:** item raro (chance de 1 em 4.000 por
-  pescaria) usado para encantar sua vara equipada.
+- **🔮 Relíquia Encantada:** item raro (chance mínima por pescaria)
+  usado para encantar sua vara equipada.
 
 ## Evento Global: Criaturas Extintas
 
@@ -347,6 +386,7 @@ títulos comprados e aparece em destaque no perfil.
 | `/pescar` | Abre sua cabana de pescador (menu principal, privado) |
 | `/perfil [jogador]` | Mostra seu perfil ou o de outro membro, publicamente |
 | `/fischpedia` | Sua "Pokédex" de peixes já capturados |
+| `/pocoes` | Veja seu estoque de poções e ative uma |
 | `/definir-canal-eventos` | (ADM) Define o canal de capturas raras e Eventos Globais |
 | `/definir-mencao-eventos` | (ADM) Define quem é marcado (@) quando um Evento Global começa |
 | `/definir-titulo` | (ADM) Concede um título especial customizado a um jogador |
